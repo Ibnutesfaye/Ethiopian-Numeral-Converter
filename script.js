@@ -495,7 +495,7 @@ function renderHistory() {
   });
 }
 
-/** Simple HTML escaper to prevent XSS in history rendering */
+/** Simple HTML escaper to prevent XSS in history renderinG */
 function escapeHTML(str) {
   return String(str)
     .replace(/&/g,'&amp;')
