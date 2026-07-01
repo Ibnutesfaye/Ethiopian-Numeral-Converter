@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ge'ez ↔ Arabic Number Converter</title>
-  <meta name="description" content="Convert between Ge'ez (Ethiopian) numerals and Arabic numbers. Supports 1 to 99,999,999." />
+  <meta name="description"
+    content="Convert between Ge'ez (Ethiopian) numerals and Arabic numbers. Supports 1 to 99,999,999." />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
   <!-- ══════════════════════════════════════════
@@ -21,12 +24,7 @@
           <p class="site-subtitle">Ethiopian Numeral Converter</p>
         </div>
       </div>
-      <button
-        id="themeToggle"
-        class="theme-toggle"
-        aria-label="Toggle dark mode"
-        title="Toggle dark / light theme"
-      >
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark / light theme">
         <span class="theme-icon" aria-hidden="true">🌙</span>
       </button>
     </div>
@@ -37,14 +35,14 @@
   ══════════════════════════════════════════ -->
   <main id="main" role="main">
 
-    <!-- ── CONVERTER CARD ── -->
+    <!-- ── COnVERTER CARD ── -->
     <section class="card converter-card" aria-label="Converter">
 
       <!-- Mode pills -->
       <div class="mode-bar" role="group" aria-label="Conversion direction">
-        <button class="mode-pill active" id="modeAuto"   data-mode="auto"    aria-pressed="true">Auto Detect</button>
-        <button class="mode-pill"        id="modeAtoG"   data-mode="a2g"     aria-pressed="false">Arabic → Ge'ez</button>
-        <button class="mode-pill"        id="modeGtoA"   data-mode="g2a"     aria-pressed="false">Ge'ez → Arabic</button>
+        <button class="mode-pill active" id="modeAuto" data-mode="auto" aria-pressed="true">Auto Detect</button>
+        <button class="mode-pill" id="modeAtoG" data-mode="a2g" aria-pressed="false">Arabic → Ge'ez</button>
+        <button class="mode-pill" id="modeGtoA" data-mode="g2a" aria-pressed="false">Ge'ez → Arabic</button>
       </div>
 
       <!-- Conversion layout -->
@@ -53,16 +51,9 @@
         <!-- Input -->
         <div class="panel input-panel">
           <label class="panel-label" for="inputField" id="inputLabel">Enter a number</label>
-          <textarea
-            id="inputField"
-            class="number-field"
-            placeholder="e.g. 123 or ፻፳፫"
-            rows="3"
-            aria-labelledby="inputLabel"
-            aria-describedby="inputHint errorMsg"
-            autocomplete="off"
-            spellcheck="false"
-          ></textarea>
+          <textarea id="inputField" class="number-field" placeholder="e.g. 123 or ፻፳፫" rows="3"
+            aria-labelledby="inputLabel" aria-describedby="inputHint errorMsg" autocomplete="off"
+            spellcheck="false"></textarea>
           <p id="inputHint" class="hint">Arabic (1–99,999,999) or Ge'ez numerals</p>
         </div>
 
@@ -77,13 +68,8 @@
         <!-- Output -->
         <div class="panel output-panel">
           <label class="panel-label" id="outputLabel">Result</label>
-          <div
-            id="outputField"
-            class="number-field output-field"
-            role="status"
-            aria-live="polite"
-            aria-labelledby="outputLabel"
-          >
+          <div id="outputField" class="number-field output-field" role="status" aria-live="polite"
+            aria-labelledby="outputLabel">
             <span class="output-placeholder">—</span>
           </div>
           <p id="detectedMode" class="hint"></p>
@@ -119,7 +105,8 @@
     <section class="card history-card" aria-label="Conversion history">
       <div class="history-header">
         <h2 class="card-heading">History <span id="historyCount" class="history-badge">0</span></h2>
-        <button id="clearHistoryBtn" class="btn btn-ghost btn-sm" aria-label="Clear conversion history">Clear all</button>
+        <button id="clearHistoryBtn" class="btn btn-ghost btn-sm" aria-label="Clear conversion history">Clear
+          all</button>
       </div>
       <ul id="historyList" class="history-list" role="list" aria-label="Recent conversions">
         <li class="history-empty">No conversions yet.</li>
@@ -132,9 +119,11 @@
        FOOTER
   ══════════════════════════════════════════ -->
   <footer class="site-footer" role="contentinfo">
-    <p>Built with care for Ethiopian cultural heritage &nbsp;·&nbsp; Ge'ez numerals (፩–፼) &nbsp;·&nbsp; Range: 1–99,999,999</p>
+    <p>Built with care for Ethiopian cultural heritage &nbsp;·&nbsp; Ge'ez numerals (፩–፼) &nbsp;·&nbsp; Range:
+      1–99,999,999</p>
   </footer>
 
   <script src="script.js"></script>
 </body>
+
 </html>
